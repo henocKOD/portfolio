@@ -1,0 +1,208 @@
+/* Palette de couleurs */
+:root {
+    --bg-color: #1c2d4e;       /* Fond principal */
+    --text-color: #f7f7f0;     /* Couleur du texte */
+    --accent-color: #1c2d4e;   /* Couleur d'accent */
+    --card-bg: #415a66;        /* Fond des cartes */
+    --hover-color: #171a1b;    /* Couleur au survol */
+}
+body {
+    font-family: 'Poppins', sans-serif; /* Ou 'Poppins' */
+}
+
+h1, h2, h3 {
+    font-weight: 900; /* Gras pour les titres */
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace; /* Ou 'Fira Code', monospace */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--accent-color);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+nav {
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--hover-color);
+}
+
+main {
+    padding: 10px;
+	margin: 60px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: var(--hover-color);
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 15px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+.about-education {
+    display: flex;
+    justify-content: space-between; /* Espace entre les deux div */
+    gap: 20px; /* Espacement horizontal */
+    margin-bottom: 40px;
+	
+}
+
+.about, .education {
+    flex: 1; /* Les deux div prennent une largeur égale */
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace; /* Ou 'Fira Code', monospace */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about:hover {
+	transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	
+}
+.education:hover {
+	transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+	
+
+.about img {
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-family: 'Roboto Mono', monospace; /* Ou 'Fira Code', monospace */
+    color: #FFFFFF; /* Texte clair */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400; /* Normal pour les paragraphes */
+}
+
+@media (max-width: 768px) {
+    .about-education {
+        flex-direction: column; /* Les sections s'empilent sur petit écran */
+        gap: 30px;
+    }
+}
+nav {
+    position: sticky; /* Rend la barre "collante" */
+    top: 0; /* Devient fixe lorsqu'elle atteint le haut */
+    z-index: 1000; /* S'assure qu'elle reste au-dessus des autres éléments */
+    background-color: #23333a; /* Couleur de fond */
+    padding: 10px 0; /* Espacement interne */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour différencier */
+}
+body {
+    font-family: 'Roboto Mono', monospace; /* Ou 'Fira Code', monospace */
+}
+
+code, pre {
+    font-family: 'Roboto Mono', monospace; /* Polices idéales pour le code */
+    background-color: #2E2E2E; /* Fond sombre pour l'effet terminal */
+    color: #FFFFFF; /* Texte clair */
+    padding: 10px;
+    border-radius: 5px;
+    display: block; /* S'applique aux blocs de code */
+}
